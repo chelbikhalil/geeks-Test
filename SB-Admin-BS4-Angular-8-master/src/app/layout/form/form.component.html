@@ -1,0 +1,43 @@
+<div [@routerTransition]>
+    <app-page-header [heading]="'Typage des attributs'" [icon]="'fa-edit'"></app-page-header>
+</div>
+<div>
+<div class="row" style="margin-left: 5%">
+    <input type="submit" value="Sauvegarder les changement"> 
+</div>
+    <div class="row" style="margin-left: 5%">
+        <div>
+                <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#home" style="margin: 10%">Tous les Attributs</a>
+                          
+                        
+                    </li>
+                        <li><a data-toggle="tab" target="#menu1" style="margin: 10%">Attribut connus</a>
+                          
+                        
+                        </li>
+                        <li><a data-toggle="tab" target="#menu2"style="margin: 10%">Attribut inconnus</a></li>
+                        <li><a data-toggle="tab" routerLink="/grid" style="margin: 10%">synonyme d'attribut</a>
+                       </li>
+                      
+                      </ul>
+                      
+                      <div class="tab-content">
+                        <div id="home" class="tab-pane fade in active">
+                          <h3>HOME</h3>
+                          <p>Some content.</p>
+                        </div>
+                        <div id="menu1" class="tab-pane fade">
+                          <h3>Menu 1</h3>
+                          <p>Some content in menu 1.</p>
+                        </div>
+                        <div id="menu2" class="tab-pane fade">
+                          <h3>Menu 2</h3>
+                          <p>Some content in menu 2.</p>
+                        </div>
+                      </div>
+                    
+    </div>
+    </div>
+    <!-- /.row -->
+</div>

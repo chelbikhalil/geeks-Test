@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: khalil
+Build-Jdk: 12.0.1
+Implementation-Title: SpringRestMongoDb
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.javasampleapproach
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/spring-boot-rest-mongodb
+Created-By: Maven Integration for Eclipse
+

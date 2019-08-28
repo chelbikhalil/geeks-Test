@@ -1,0 +1,55 @@
+<nav class="sidebar" [ngClass]="{sidebarPushRight: isActive, collapsed: collapsed}">
+    <div class="list-group">
+        <a routerLink="/dashboard" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-dashboard"></i>&nbsp;
+            <span>{{ 'Acceuil' | translate }}</span>
+        </a>
+        <a [routerLink]="['/charts']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;
+            <span>{{ 'gestion des fichiers' | translate }}</span>
+        </a>
+        <a [routerLink]="['/tables']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-table"></i>&nbsp;
+            <span>{{ 'Toute le Fonctionnalité' | translate }}</span>
+        </a>
+        <div class="nested-menu">
+            <a class="list-group-item" (click)="addExpandClass('pages')">
+                <i class="fa fa-plus"></i>&nbsp;
+                <span>{{ 'Parametrages' | translate }}</span>
+            </a>
+            <li class="nested" [class.expand]="showMenu === 'pages'">
+                <ul class="submenu">
+                    <li>
+                        <a href="javascript:void(0)">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'Parametrage attrib' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'charger listes' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/typage']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'typage Attrib' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'Rafraichir listes' | translate }}</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </div>
+      
+        
+
+
+    </div>
+    
+</nav>

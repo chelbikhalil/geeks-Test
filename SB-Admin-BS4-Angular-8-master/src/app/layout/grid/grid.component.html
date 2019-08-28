@@ -1,0 +1,58 @@
+<div [@routerTransition]>
+        <app-page-header [heading]="'Typage des attributs'" [icon]="'fa-edit'"></app-page-header>
+    </div>
+    <div>
+            <div class="row" style="margin-left: 5%">
+                <input type="submit" value="Sauvegarder les changement"> 
+            </div>
+                <div class="row" style="margin-left: 5%">
+                    <div>
+                            <ul class="nav nav-tabs">
+                                    <li class="active"><a data-toggle="tab" href="#home" style="margin: 10%">Tous les Attributs</a></li>
+                                    <li><a data-toggle="tab" href="#menu1" style="margin: 10%">Attribut connus</a></li>
+                                    <li><a data-toggle="tab" href="#menu2"style="margin: 10%">Attribut inconnus</a></li>
+                                    <li><a data-toggle="tab" routerLink="/grid" style="margin: 10%">synonyme d'attribut</a>
+                                      <div *ngFor="let synonyme of synonyme; index as i; let i = index;"> 
+                      
+                                          <button (click)="hide=!hide;hiden(i);" id="index"  class="btn btn-info btn-lg">
+                                              <span class="glyphicon">+</span> 
+                                          </button>
+                                          {{i+1}} {{synonyme.code}}
+
+                                         <div *ngIf="hide" >hierarchy_code : {{synonyme.hierarchy_code}} </div>
+                                         <div *ngIf="hide" >roles : {{synonyme.roles}} </div>
+                                         <div *ngIf="hide" >validations : {{synonyme.validations}} </div>
+                                         <div *ngIf="hide" >required : {{synonyme.required}} </div>
+                                         <div *ngIf="hide" >variant : {{synonyme.variant}} </div>
+                                         <div *ngIf="hide" >label : {{synonyme.label}} </div>
+                                         <div *ngIf="hide" >label_translations : {{synonyme.label_translations}} </div>
+                                         <div *ngIf="hide" >locale : {{synonyme.locale}} </div>
+                                         <div *ngIf="hide" >requirement_level : {{synonyme.requirement_level}} </div>
+                                         <div *ngIf="hide" >values_list : {{synonyme.values_list}} </div>
+                                         <div *ngIf="hide" >example : {{synonyme.example}} </div>
+                                         <div *ngIf="hide" >type_parameter : {{synonyme.type_parameter}} </div>
+                                         <div *ngIf="hide" >description : {{synonyme.description}} </div>
+                                        </div>
+                                        
+                                         
+                                     
+                                      </li>
+                                  </ul>
+                             
+                                  <div class="tab-content">
+                                    <div id="home" class="tab-pane fade in active">
+                                      <h3>HOME</h3>
+                                      <p>Some content.</p>
+                                    </div>
+                                    <div id="menu1" class="tab-pane fade">
+                                      <h3>Menu 1</h3>
+                                      <p>Some content in menu 1.</p>
+                                    </div>
+                                    <div id="menu2" class="tab-pane fade">
+                                      <h3>Menu 2</h3>
+                                      <p>Some content in menu 2.</p>
+                                    </div>
+                                  </div>
+                        
+                </div>
+                </div>
